@@ -1,5 +1,6 @@
 ﻿using C__Coderhouse_MAIN.database;
 using C__Coderhouse_MAIN.models;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,17 +19,9 @@ namespace C__Coderhouse_MAIN.Services
                 return users;
             }
         }
-        //public static List<Users> GetUserById(int id)
-        //{
 
-        //    using (DatabaseContext context = new DatabaseContext())
-        //    {
-        //        List<Users> users = context.Users.ToList();
-        //        var user = from u in users where u.Id == id select u;
-        //        return user.ToList();
-        //    }
-        //}
-        public static Users GetUserById(int id)
+
+        public static Users GetUserByID(int id)
         {
 
             using (DatabaseContext context = new DatabaseContext())
@@ -42,6 +35,24 @@ namespace C__Coderhouse_MAIN.Services
                     }
                 }
                     return null;
+            }
+        }
+        public static bool UpdateUserByID(Users user, int id)
+        {
+            using (DatabaseContext context = new DatabaseContext())
+            {
+
+            
+                Users? userFound = context.Users.Where(u=>u.Id==id).FirstOrDefault();
+
+                userFound.Name = user.Name;
+                userFound.LastName = user.LastName;
+                userFound.Email = user.Email;
+                userFound.Password = user.Password;
+                userFound.Username = user.Username;
+                context.Users.Update(userFound);
+                context.SaveChanges();
+                return true;
             }
         }
         public static bool AddUser(Users user)

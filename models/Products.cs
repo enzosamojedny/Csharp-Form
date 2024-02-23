@@ -22,6 +22,7 @@ namespace C__Coderhouse_MAIN.models
 
         public string Category {  get; set; }
 
+        public int Cost { get; set; }
         static Products()
         {
             Products s = new Products();

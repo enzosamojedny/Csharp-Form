@@ -40,7 +40,7 @@ namespace C__Coderhouse_MAIN.models
             _id = id;
             _comments = comments;
             _userId = userId;
-              ProductsSold = new HashSet<Sales>();
+            ProductsSold = new HashSet<Sales>();
         }
     }
 }

@@ -17,6 +17,14 @@ namespace C__Coderhouse_MAIN
         {
             InitializeComponent();
         }
+        public UserFormView(Users user):this()
+        {
+            this.txtName.Text = user.Name;
+            this.txtEmail.Text = user.Email;
+            this.txtPassword.Text = user.Password;
+            this.txtSurname.Text = user.LastName;
+            this.txtUsername.Text = user.Username;
+        }
         public Users CreatedUser { get; private set; }
         private void ConfirmUser_click(object sender, EventArgs e)
         {

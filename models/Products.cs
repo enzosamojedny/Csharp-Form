@@ -8,7 +8,7 @@ namespace C__Coderhouse_MAIN.models
 {
     public partial class Products
     {
-        public int Id {  get; set; }
+        public int ID {  get; set; }
         public string Name { get; set; }
 
         public string Description { get; set; }
@@ -21,12 +21,11 @@ namespace C__Coderhouse_MAIN.models
         public decimal TotalProduct {  get; set; }
 
         public string Category {  get; set; }
+        public int UserID { get; set; }
+        public decimal? Cost { get; set; }
+        public virtual Users IdUserNavigation { get; set; } = null!;
+        public virtual ICollection<ProductSold> ProductSold { get; set; }
 
-        public int Cost { get; set; }
-        static Products()
-        {
-            Products s = new Products();
-        }
 
     }
 }

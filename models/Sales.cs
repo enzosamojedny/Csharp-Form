@@ -10,37 +10,13 @@ namespace C__Coderhouse_MAIN.models
     {
         public Sales()
         {
-            ProductsSold = new HashSet<Sales>();
-        }
-        private string _id;
-        private string _comments;
-        private string _userId;
-
-        public string Id
-        {
-            get { return _id; }
-            set { _id = value; }
+            ProductSold = new HashSet<ProductSold>();
         }
 
-        public string Comments
-        {
-            get { return _comments; }
-            set { _comments = value; }
-        }
-
-        public string UserId
-        {
-            get { return _userId; }
-            set { _userId = value; }
-        }
-
-        public ICollection<Sales> ProductsSold { get; set; }
-        public Sales(string id, string comments, string userId)
-        {
-            _id = id;
-            _comments = comments;
-            _userId = userId;
-            ProductsSold = new HashSet<Sales>();
-        }
+        public int ID { get; set; }
+        public string Comments { get; set; }
+        public int UserID {  get; set; }
+        public virtual Users IdUserNavigation { get; set; } = null!;
+        public virtual ICollection<ProductSold> ProductSold { get; set; }
     }
 }

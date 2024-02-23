@@ -148,6 +148,7 @@ namespace C__Coderhouse_MAIN
             Name = "Form1";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";
+            Load += Form1_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridProducts).EndInit();
             ResumeLayout(false);
             PerformLayout();

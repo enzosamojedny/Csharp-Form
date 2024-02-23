@@ -29,7 +29,7 @@ namespace C__Coderhouse_MAIN.Services
                 List<Users> users = UserService.GetUsers();
                 foreach (Users item in users)
                 {
-                    if (item.Id == id)
+                    if (item.ID == id)
                     {
                         return item;
                     }
@@ -43,7 +43,7 @@ namespace C__Coderhouse_MAIN.Services
             {
 
             
-                Users? userFound = context.Users.Where(u=>u.Id==id).FirstOrDefault();
+                Users? userFound = context.Users.Where(u=>u.ID==id).FirstOrDefault();
 
                 userFound.Name = user.Name;
                 userFound.LastName = user.LastName;

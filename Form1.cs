@@ -128,7 +128,7 @@ namespace C__Coderhouse_MAIN
             //check if UserFormView is correct
             userForm.ShowDialog();
             Users modifiedUser = userForm.CreatedUser;
-            if(UserService.UpdateUserByID(modifiedUser, this.SelectedUser.Id))
+            if (UserService.UpdateUserByID(modifiedUser, this.SelectedUser.ID))
             {
                 MessageBox.Show("User updated", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
@@ -142,6 +142,11 @@ namespace C__Coderhouse_MAIN
                 object data = selection[0].DataBoundItem;
                 this.SelectedUser = data as Users;
             }
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

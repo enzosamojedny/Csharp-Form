@@ -20,11 +20,11 @@ namespace C__Coderhouse_MAIN.Services
             }
         }
         
-        public static bool DeleteProductByID(int productId)
+        public static bool DeleteProductByID(int productID)
         {
             using (DatabaseContext context = new DatabaseContext())
             {
-                Products productToDelete = context.Products.Include(p=>p.ProductSold).Where(p => p.Id == productId).FirstOrDefault();
+                Products productToDelete = context.Products.Include(p=>p.ProductSold).Where(p => p.ID == productID).FirstOrDefault();
                 if (productToDelete is not null)
                 {
                     context.Products.Remove(productToDelete);

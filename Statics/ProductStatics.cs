@@ -12,7 +12,7 @@ namespace C__Coderhouse_MAIN.Statics
         public static Products GetProductByID(int productId)
         {
 
-            return new Products { Id = productId, Name = "Product Name", Description = "Product Description", BuyPrice = 10.0, SellPrice = 15.0, Stock = 100, TotalProduct = 1000, Category = "Category" };
+            return new Products { ID = productId, Name = "Product Name", Description = "Product Description", BuyPrice = 10.0, SellPrice = 15.0, Stock = 100, TotalProduct = 1000, Category = "Category" };
         }
 
         public static List<Products> GetProducts()
@@ -20,8 +20,8 @@ namespace C__Coderhouse_MAIN.Statics
 
             return new List<Products>
             {
-                new Products { Id = 1, Name = "Product 1", Description = "Description 1", BuyPrice = 10.0, SellPrice = 15.0, Stock = 100, TotalProduct = 1000, Category = "Category 1" },
-                new Products { Id = 2, Name = "Product 2", Description = "Description 2", BuyPrice = 20.0, SellPrice = 25.0, Stock = 200, TotalProduct = 2000, Category = "Category 2" },
+                new Products { ID = 1, Name = "Product 1", Description = "Description 1", BuyPrice = 10.0, SellPrice = 15.0, Stock = 100, TotalProduct = 1000, Category = "Category 1" },
+                new Products { ID = 2, Name = "Product 2", Description = "Description 2", BuyPrice = 20.0, SellPrice = 25.0, Stock = 200, TotalProduct = 2000, Category = "Category 2" },
             };
         }
 
@@ -32,7 +32,7 @@ namespace C__Coderhouse_MAIN.Statics
 
         public static void UpdateProduct(Products product)
         {
-            Console.WriteLine($"Product with ID {product.Id} modified successfully.");
+            Console.WriteLine($"Product with ID {product.ID} modified successfully.");
         }
 
         public static void DeleteProduct(int productId)

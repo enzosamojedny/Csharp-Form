@@ -18,7 +18,11 @@ namespace C__Coderhouse_MAIN.database
         public virtual DbSet<models.Sales> Sales { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(connectionString: "Server=.; Database=CodeDB; Trusted_Connection=True;TrustServerCertificate=true;");
+            if (!optionsBuilder.IsConfigured)
+            {
+                optionsBuilder.UseSqlServer(connectionString: "Server=.; Database=NewCodeDB; Trusted_Connection=True;TrustServerCertificate=true;");
+            }
+            
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

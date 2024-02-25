@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace C__Coderhouse_MAIN.Migrations
 {
     [DbContext(typeof(DatabaseContext))]
-    [Migration("20240223035123_newestMigration")]
-    partial class newestMigration
+    [Migration("20240225014151_firstMigration")]
+    partial class firstMigration
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -68,9 +68,6 @@ namespace C__Coderhouse_MAIN.Migrations
                     b.Property<string>("Category")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<decimal>("Cost")
-                        .HasColumnType("money");
 
                     b.Property<string>("Description")
                         .IsRequired()

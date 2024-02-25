@@ -5,7 +5,7 @@
 namespace C__Coderhouse_MAIN.Migrations
 {
     /// <inheritdoc />
-    public partial class newestMigration : Migration
+    public partial class firstMigration : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -145,13 +145,6 @@ namespace C__Coderhouse_MAIN.Migrations
                 oldClrType: typeof(string),
                 oldType: "nvarchar(max)");
 
-            migrationBuilder.AddColumn<decimal>(
-                name: "Cost",
-                table: "Products",
-                type: "money",
-                nullable: false,
-                defaultValue: 0m);
-
             migrationBuilder.AddColumn<int>(
                 name: "UserID",
                 table: "Products",
@@ -244,10 +237,6 @@ namespace C__Coderhouse_MAIN.Migrations
 
             migrationBuilder.DropIndex(
                 name: "IX_Products_UserID",
-                table: "Products");
-
-            migrationBuilder.DropColumn(
-                name: "Cost",
                 table: "Products");
 
             migrationBuilder.DropColumn(

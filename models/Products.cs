@@ -21,8 +21,8 @@ namespace C__Coderhouse_MAIN.models
         public decimal TotalProduct {  get; set; }
 
         public string Category {  get; set; }
-        public int UserID { get; set; }
-        public decimal? Cost { get; set; }
+        public int UsersID { get; set; }
+        //public decimal? Cost { get; set; }
         public virtual Users IdUserNavigation { get; set; } = null!;
         public virtual ICollection<ProductSold> ProductSold { get; set; }
 

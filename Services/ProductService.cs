@@ -15,7 +15,7 @@ namespace C__Coderhouse_MAIN.Services
         {
             using (DatabaseContext context = new DatabaseContext())
             {
-                List<Products> products = context.Products.ToList();
+                List<Products> products = context.Products.ToList(); //the error gets thrown here
                 return products;
             }
         }

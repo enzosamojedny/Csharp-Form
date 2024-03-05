@@ -38,6 +38,7 @@ namespace C__Coderhouse_MAIN
             btnCreateUser = new Button();
             button4 = new Button();
             btnUpdateUser = new Button();
+            button5 = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridProducts).BeginInit();
             SuspendLayout();
             // 
@@ -129,11 +130,22 @@ namespace C__Coderhouse_MAIN
             btnUpdateUser.UseVisualStyleBackColor = true;
             btnUpdateUser.Click += btnUpdateUser_Click;
             // 
+            // button5
+            // 
+            button5.Location = new Point(12, 348);
+            button5.Name = "button5";
+            button5.Size = new Size(124, 26);
+            button5.TabIndex = 9;
+            button5.Text = "Create product";
+            button5.UseVisualStyleBackColor = true;
+            button5.Click += btnCreateProduct_click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(button5);
             Controls.Add(btnUpdateUser);
             Controls.Add(button4);
             Controls.Add(btnCreateUser);
@@ -170,5 +182,6 @@ namespace C__Coderhouse_MAIN
         private Button btnCreateUser;
         private Button button4;
         private Button btnUpdateUser;
+        private Button button5;
     }
 }

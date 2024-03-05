@@ -29,7 +29,6 @@ namespace C__Coderhouse_MAIN.database
             modelBuilder.Entity<Products>(entity =>
             {
                 entity.ToTable("Products");
-                //entity.Property(e => e.Cost).HasColumnType("money");
                 entity.Property(e => e.Description).IsUnicode(false);
                 entity.Property(e => e.SellPrice).HasColumnType("money");
                 entity.HasOne(d => d.IdUserNavigation)
@@ -37,9 +36,6 @@ namespace C__Coderhouse_MAIN.database
                 .HasForeignKey(d => d.UsersID)
                 .OnDelete(DeleteBehavior.Cascade)
                 .HasConstraintName("FK_Products_Users");
-                // column UserID is renamed to UsersId
-                //entity.Property(p => p.UserID)
-                //.HasColumnName("UsersID");
             });
             modelBuilder.Entity<ProductSold>(entity =>
             {

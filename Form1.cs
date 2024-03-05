@@ -148,5 +148,22 @@ namespace C__Coderhouse_MAIN
         {
 
         }
+
+        private void btnCreateProduct_click(object sender, EventArgs e)
+        {
+            ProductFormView productForm = new ProductFormView();
+            DialogResult result = productForm.ShowDialog();
+
+            if (result == DialogResult.OK)
+            {
+                Products product = productForm.CreatedProduct;
+
+                if (product != null && ProductService.AddProduct(product))
+                {
+                    MessageBox.Show("Product created", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+        }
+
     }
 }

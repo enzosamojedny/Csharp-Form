@@ -34,6 +34,7 @@ namespace C__Coderhouse_MAIN
                 Username = this.txtUsername.Text,
                 Password = this.txtPassword.Text,
                 Email = this.txtEmail.Text,
+
             };
             this.CreatedUser = user;
             this.Close();

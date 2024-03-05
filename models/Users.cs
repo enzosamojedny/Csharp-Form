@@ -22,5 +22,10 @@ namespace C__Coderhouse_MAIN.models
 
         public virtual ICollection<Products> Products { get; set; }
         public virtual ICollection<Sales> Sales { get; set; }
+
+        public static implicit operator Users(Products v)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

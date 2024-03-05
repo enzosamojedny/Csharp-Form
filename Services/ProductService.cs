@@ -11,11 +11,23 @@ namespace C__Coderhouse_MAIN.Services
 {
     public static class ProductService
     {
+        public static bool AddProduct(Products product)
+        {
+            using (DatabaseContext context = new DatabaseContext())
+            {
+                if (product != null)
+                {
+                    context.Products.Add(product); //ERROR HERE
+                }
+                context.SaveChanges();
+                return true;
+            }
+        }
         public static List<Products> GetProducts()
         {
             using (DatabaseContext context = new DatabaseContext())
             {
-                List<Products> products = context.Products.ToList(); //the error gets thrown here
+                List<Products> products = context.Products.ToList();
                 return products;
             }
         }
